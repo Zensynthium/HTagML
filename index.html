@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>HTML Tag Challenge</title>
+<meta charset="UTF-8">
+<meta name="author" content="Anthony Heggin">
+<meta name="description" content="My HTML Tag Challenge, sprinkled with a dose of CSS flexing and terrible humor!">
+<meta name="robots" content="nofollow">
+<link href="http://www.zondicons.com/css/main.css" rel="stylesheet" type="text/css">
+<style>
+  html {
+    margin-left: 150px;
+  }
+
+
+  body {
+    /* Credit to https://www.heropatterns.com/ */
+    background-color: #dcf0f4;
+    background-image: url("data:image/svg+xml,%3Csvg width='48' height='64' viewBox='0 0 48 64' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M48 28v-4L36 12 24 24 12 12 0 24v4l4 4-4 4v4l12 12 12-12 12 12 12-12v-4l-4-4 4-4zM8 32l-6-6 10-10 10 10-6 6 6 6-10 10L2 38l6-6zm12 0l4-4 4 4-4 4-4-4zm12 0l-6-6 10-10 10 10-6 6 6 6-10 10-10-10 6-6zM0 16L10 6 4 0h4l4 4 4-4h4l-6 6 10 10L34 6l-6-6h4l4 4 4-4h4l-6 6 10 10v4L36 8 24 20 12 8 0 20v-4zm0 32l10 10-6 6h4l4-4 4 4h4l-6-6 10-10 10 10-6 6h4l4-4 4 4h4l-6-6 10-10v-4L36 56 24 44 12 56 0 44v4z' fill='%233d0a8e' fill-opacity='0.4' fill-rule='evenodd'/%3E%3C/svg%3E");
+  }
+  
+  h1 {
+    font-size: 32px;
+    text-align: center;
+    text-shadow: 3px 4px 3px #CECECE;
+    color: #1f0087;
+  }
+  
+  h2, h3 {
+    color: #7f59ff;
+    text-shadow: 3px 4px 3px #CECECE;
+  }
+  
+  h3 {
+    font-style: italic;
+  }
+  
+  abbr, a:link {
+    color: #7f59ff;
+  }
+  
+  a:visited {
+    color: #6bb7dd;
+  }
+  
+  a:hover {
+    color: #1f0087;
+    transition: all 0.6s ease-out;
+  }
+  
+  a:active {
+    color: #17002d;
+  }
+  
+  kbd, code {
+    /* Credit to Colorzilla Gradient Editor for the Polyfill code.
+    Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#6bb7dd+0,7debe8+0,796ae8+100 */
+    color: white;
+    background: #6bb7dd; /* Old browsers */
+    background: -moz-linear-gradient(left, #6bb7dd 0%, #7debe8 0%, #796ae8 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, #6bb7dd 0%,#7debe8 0%,#796ae8 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, #6bb7dd 0%,#7debe8 0%,#796ae8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6bb7dd', endColorstr='#796ae8',GradientType=1 ); /* IE6-9 */
+    border-radius: 3px;
+    padding: 1px 4px;
+  }
+  
+  hr {
+    margin-bottom: 20px;
+    width: 50%;
+  }
+  
+  footer, address {
+    text-align: center;
+    font-style: italic;
+  }
+  
+  .box {
+    background: rgba(255, 255, 255, 0.9);
+    border-bottom: 0 none;
+    border-radius: 5px;
+	  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.46);
+	  padding: 15px 30px;
+	  margin: 25px 5px;
+	  margin-left: auto;
+	  margin-right: auto;
+	  width: 70%;
+	  text-align: center;
+  }
+  
+  .box li {
+    text-align: left;
+  }
+  
+  .box ol, .box ul {
+    margin-left: 5%;
+    line-height: 20px;
+  }
+  
+  .box footer {
+    width: 60%;
+  }
+  
+  .spacer {
+    display: block;
+    height: 10px;
+    margin-top: -10px;
+    visibility: hidden;
+  }
+  
+  #nav-bar {
+    position: fixed;
+  }
+  
+  #nav-bar ul {
+    list-style-type: none;
+    background-color: #7f59ff;
+	  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.46);
+    margin: 0;
+    padding: 0;
+    left: 0;
+    top: 0;
+    width: 150px;
+    height: 100%;
+    position: fixed;
+    overflow: auto;
+  }
+  
+  #nav-bar li a {
+    display: block;
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+  }
+  
+  #nav-bar li a:hover {
+    background-color: #5e2eff;
+  }
+  
+  #header-box {
+    padding: 10px 5px 1px;
+	  margin: 20px 5px;
+	  margin-left: auto;
+	  margin-right: auto;
+	  width: 60%;
+  }
+  
+  #header-img {
+    max-width: 60%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  #footer-box {
+    width: 60%;
+  }
+
+  #social-media-buttons {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 110px;
+    padding: 5px;
+  }
+  
+  @media only screen and (max-width: 700px) {
+    
+    html {
+      margin-left: 0;
+      margin-top: 45px;
+    }
+    
+    .spacer {
+      display: block;
+      height: 55px;
+      margin-top: -55px;
+      visibility: hidden;
+    }
+
+    
+    #nav-bar ul {
+      list-style-type: none;
+      background-color: #7f59ff;
+	    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.46);
+      margin: 0;
+      padding: 0;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 45px;
+      position: fixed;
+      overflow: auto;
+      text-align: center;
+    }
+    
+    #nav-bar li a {
+      float: left;
+      font-size: 20px;
+      text-decoration: none;
+      color: white;
+      padding: 10px 20px;
+    }
+  }
+  
+  
+</style>
+</head>
+<body>
+<!-- A modest creative attempt at the HTML Tag Challenge! Enjoy! -->
+<nav id="nav-bar">
+  <ul>
+    <li><a href="#intro">Introduction</a></li>
+    <li><a href="#rules">Rules</a></li>
+    <li><a href="#resources">Resources</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+<main>
+<div id="header-box" class="box"><header><h1>Welcome to the HTagML (HTML Tag Challenge)!</h1></header></div>
+<section class="box">
+  <header><h2 id="intro">A Brief Introduction</h2></header>
+  <!-- Image Credit of Pixabay -->
+  <img id="header-img" src="https://i1.wp.com/object-lessons.com/wp-content/uploads/2018/05/HTML-Tag-on-Screen.png?w=1280&amp;ssl=1" alt="Computer with an empty end tag on screen" title="Empty End Tag on Screen">
+  <p>This is actually going to be quite the <s>extreme gauntlet</s> <em><strong>actually doable project</strong></em>. We're going to incorporate <s>every HTML tag</s> <em><strong>50 tags</strong></em> into a single page in a orginal and unique fashion to demonstrate <s>complete</s> <em><strong>relative</strong></em> mastery of HTML5, while keeping proper website and code structure principles in mind! Feel free to glance into the console using the appropriate shortcut (i.e. <kbd>ctrl + shift + j</kbd> in Google Chrome on Chrome OS/Windows), or download the document to ensure that you get an inside look at how the page is constructed as well!</p>
+  <hr>
+  <span class="spacer" id="rules"></span>
+  <header><h2>Rules</h2></header>
+  <hr>
+  <ol>
+    <li>Tags <code>&lt;h1&gt; - &lt;h6&gt;</code> will count as individual tags.</li>
+    <li>Each entry must pass through the appropriate validators (html, css, javascript, etc.).</li>
+    <li>Have fun! :^)</li>
+  </ol>
+  <hr>
+  <!-- Credits to Zondicons! -->
+  <span title="Credits to Zondicons! #svg">
+						<svg viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+						<g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+							<g id="icon-shape">
+								<path d="M12,11.6 L12,17.2 L15,19 L15,20 L10,20 L5,20 L5,19 L8,17.2 L8,11.6 L-8.8817842e-16,14 L-8.8817842e-16,12 L8,7.2 L8,1.99508929 C8,0.893231902 8.88772964,0 10,0 C11.1045695,0 12,0.892622799 12,1.99508929 L12,7.2 L20,12 L20,14 L12,11.6 Z" id="Combined-Shape" transform="translate(10.000000, 10.000000) rotate(-270.000000) translate(-10.000000, -10.000000) "></path>
+							</g>
+						</g>
+						</svg>
+	</span>
+	<h3>Without further ado, here we go!</h3>
+  <!-- Credits to Zondicons! -->
+  <hr>
+  <p><abbr title="HTML Tag Challenge"><strong>HTagML</strong></abbr> has rather humble origins, as it was thought up as I was putting off homework and decided that maybe there was more fun to be had experimenting with Front End Web Development than droning away at my homework <em>(not that I'm condoning procrastination or anything).</em>  I discovered that there were <strong>over 100 tags</strong> (many of them being very specific) and thought it would be interesting to see how others would try and meet the requirement of trying to cram approximately half of them into a single document! I immediately strayed away from the idea of using every single tag as I quickly realized at the pace I was going it would take roughly &infin;<sup>&infin;</sup> years to complete...a bit longer than my goldfish-like attention span has to spare.</p>
+    <hr>
+    <span class="spacer" id="resources"></span>
+    <header><h2>Resources</h2></header>
+    <hr>
+  <p>There were many resources that I utilized in the creation of this page, many that I will also recommend to you!</p>
+    <ul>
+      <li><a href="https://www.w3schools.com/tags/" target="_blank" title="List of all HTML tags from an amazing Web-Dev resource">https://www.w3schools.com/tags/</a></li>
+      <li><a href="https://www.zondicons.com/" target="_blank" title="A set of free premium SVG icons for you to use on your digital products.">https://www.zondicons.com/</a></li>
+      <li><a href="http://www.heropatterns.com/" target="_blank" title="A collection of repeatable SVG background patterns for you to use on your web projects.">http://www.heropatterns.com/</a></li>
+      <li><a href="https://www.colorzilla.com/gradient-editor/" target="_blank" title="Ultimate CSS Gradient Generator, powerful Photoshop-like CSS gradient editor from ColorZilla.">https://www.colorzilla.com/gradient-editor/</a></li>
+      <li><a href="http://redwriteblue.com/tags/htmlcount.html" target="_blank" title="HTML Tag Counter">http://redwriteblue.com/tags/htmlcount.html</a></li>
+    </ul>
+  <p>If you have anything that you'd recommend I add or any criticism whatsoever, please email me I appreciate it! The goal of this is simply to connect with the Web Development community while simul<wbr>taneously becoming a better developer myself!</p>
+  <time><p id="Timer"></p></time>
+</section>
+</main>
+<footer id="footer-box" class="box">
+<span class="spacer" id="contact"></span>
+  &copy; I Don't Have a Company Name Yet, Inc. All Rights Reserved.<br>
+    Created by Anthony Heggin
+    <address>
+  <div class="a2a_kit a2a_kit_size_32 a2a_default_style a2a_follow" id="social-media-buttons">
+    <a class="a2a_button_twitter" title="Twitter" data-a2a-follow="AHeggin"></a>
+    <a class="a2a_button_linkedin" title="Linkedin" data-a2a-follow="anthony-heggin"></a>
+    <a class="a2a_button_facebook" title="Facebook" data-a2a-follow="anthony.heggin"></a>
+  </div>
+  </address>
+</footer>
+<br>
+<script async src="https://static.addtoany.com/menu/page.js"></script>
+<script>
+var clockTimer = setInterval(clock, 1000);
+
+function timeSpent() {
+  var d = new Date();
+  document.getElementById("Timer").innerHTML = d.toLocaleTimeString() - toLocaleTimeString();
+}
+</script>
+</body>
+</html>
