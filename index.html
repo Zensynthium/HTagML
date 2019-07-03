@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>HTML Tag Challenge</title>
+<meta charset="UTF-8">
+<meta name="author" content="Anthony Heggin">
+<meta name="description" content="My HTML Tag Challenge, sprinkled with a dose of CSS flexing and terrible humor!">
+<meta name="robots" content="nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css?family=PT+Serif%7CRoboto&amp;display=swap" rel="stylesheet">
+<style>
+
+  html {
+    margin-left: 150px;
+    color: #798991;
+    line-height: 24px;
+    font-family: 'PT Sans', sans-serif;
+  }
+
+  body {
+    /* Credit to https://www.heropatterns.com/ */
+    background-color: #dcf0f4;
+    background-image: url("data:image/svg+xml,%3Csvg width='48' height='64' viewBox='0 0 48 64' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M48 28v-4L36 12 24 24 12 12 0 24v4l4 4-4 4v4l12 12 12-12 12 12 12-12v-4l-4-4 4-4zM8 32l-6-6 10-10 10 10-6 6 6 6-10 10L2 38l6-6zm12 0l4-4 4 4-4 4-4-4zm12 0l-6-6 10-10 10 10-6 6 6 6-10 10-10-10 6-6zM0 16L10 6 4 0h4l4 4 4-4h4l-6 6 10 10L34 6l-6-6h4l4 4 4-4h4l-6 6 10 10v4L36 8 24 20 12 8 0 20v-4zm0 32l10 10-6 6h4l4-4 4 4h4l-6-6 10-10 10 10-6 6h4l4-4 4 4h4l-6-6 10-10v-4L36 56 24 44 12 56 0 44v4z' fill='%233d0a8e' fill-opacity='0.4' fill-rule='evenodd'/%3E%3C/svg%3E");
+  }
+  
+  h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 32px;
+    line-height: 34px;
+    text-align: center;
+    text-shadow: 3px 4px 3px #CECECE;
+    color: #1f0087;
+    font-weight: 300;
+  }
+  
+  h2, h3 {
+    color: #7f59ff;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    text-shadow: 3px 4px 3px #CECECE;
+    margin-top: 8px;
+
+  }
+  
+  h2 {
+    font-size: 28px;
+    margin-top: 12px;
+  }
+  
+  h3 {
+    font-style: italic;
+  }
+  
+  abbr, a:link {
+    color: #7f59ff;
+  }
+  
+  a:visited {
+    color: #6bb7dd;
+  }
+  
+  a:hover {
+    color: #1f0087;
+    transition: all 0.6s ease-out;
+  }
+  
+  a:active {
+    color: #17002d;
+  }
+  
+  kbd, code {
+    /* Credit to Colorzilla Gradient Editor for the Polyfill code.
+    Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#6bb7dd+0,7debe8+0,796ae8+100 */
+    color: white;
+    background: #6bb7dd; /* Old browsers */
+    background: -moz-linear-gradient(left, #6bb7dd 0%, #7debe8 0%, #796ae8 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, #6bb7dd 0%,#7debe8 0%,#796ae8 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, #6bb7dd 0%,#7debe8 0%,#796ae8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6bb7dd', endColorstr='#796ae8',GradientType=1 ); /* IE6-9 */
+    border-radius: 3px;
+    padding: 1px 4px;
+  }
+  
+  hr {
+    width: 50%;
+  }
+  
+  footer, address {
+    text-align: center;
+    font-style: italic;
+  }
+  
+  .box {
+    background: rgba(255, 255, 255, 0.9);
+    border-bottom: 0 none;
+    border-radius: 5px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.46);
+    padding: 10px 30px;
+    margin: 25px 5px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    text-align: center;
+  }
+  
+  .box li {
+    text-align: left;
+  }
+  
+  .box ol, .box ul {
+    margin-left: 5%;
+    line-height: 20px;
+  }
+  
+  .box footer {
+    width: 60%;
+  }
+  
+  .spacer {
+    display: block;
+    height: 10px;
+    margin-top: -10px;
+    visibility: hidden;
+  }
+  
+  #nav-bar {
+    position: fixed;
+  }
+  
+  #nav-bar ul {
+    list-style-type: none;
+    background-color: #7f59ff;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.46);
+    margin: 0;
+    padding: 0;
+    left: 0;
+    top: 0;
+    width: 150px;
+    height: 100%;
+    position: fixed;
+    overflow: auto;
+  }
+  
+  #nav-bar li a {
+    display: block;
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+  }
+  
+  #nav-bar li a:hover {
+    background-color: #5e2eff;
+  }
+  
+  #header-box {
+    padding: 10px 5px 1px;
+    margin: 20px 5px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+  }
+  
+  #header-img {
+    max-width: 60%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  
+  #airplane-img {
+    max-width: 25px;
+    margin-top: 15px;
+  }
+  
+  
+  #footer-box {
+    width: 60%;
+  }
+
+  #social-media-buttons {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 110px;
+    padding: 5px;
+  }
+  
+  @media only screen and (max-width: 800px) {
+    
+    html {
+      margin-left: 0;
+      margin-top: 45px;
+    }
+    
+    .spacer {
+      display: block;
+      height: 55px;
+      margin-top: -55px;
+      visibility: hidden;
+    }
+
+    
+    #nav-bar ul {
+      list-style-type: none;
+      background-color: #7f59ff;
+      box-shadow: 0 1px 5px rgba(0, 0, 0, 0.46);
+      margin: 0;
+      padding: 0;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 45px;
+      position: fixed;
+      overflow: auto;
+      text-align: center;
+    }
+    
+    #nav-bar li a {
+      float: left;
+      font-size: 16px;
+      text-decoration: none;
+      color: white;
+      padding: 10px 10px;
+    }
+  }
+  
+</style>
+</head>
+<body>
+<!-- A modest creative attempt at the HTML Tag Challenge! Enjoy! -->
+<nav id="nav-bar">
+  <ul>
+    <li><a href="#intro">Introduction</a></li>
+    <li><a href="#rules">Rules</a></li>
+    <li><a href="#resources">Resources</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+<main>
+<div id="header-box" class="box"><header><h1>Welcome to the HTagML Challenge!</h1></header></div>
+<section class="box">
+  <span class="spacer" id="intro"></span>
+  <header><h2 id="intro">A Brief Introduction</h2></header>
+  <!-- Image Credit of Pixabay -->
+  <img id="header-img" src="https://i1.wp.com/object-lessons.com/wp-content/uploads/2018/05/HTML-Tag-on-Screen.png?w=1280&amp;ssl=1" alt="Computer with an empty end tag on screen" title="Empty End Tag on Screen">
+  <p>This is actually going to be quite the <s>extreme gauntlet</s> <em><strong>actually doable project</strong></em>. We're going to incorporate <s>every HTML tag</s> <em><strong>50 tags</strong></em> into a single page in a orginal and unique fashion to demonstrate <em>relative</em> mastery of HTML5, while keeping proper website and code structure principles in mind! Feel free to glance into the console using the appropriate shortcut (i.e. <kbd>ctrl + shift + j</kbd> in Google Chrome on Chrome OS/Windows), or download the document to ensure that you get an inside look at how the page is constructed as well!</p>
+  <hr>
+  <span class="spacer" id="rules"></span>
+  <header><h2>Rules</h2></header>
+  <hr>
+  <ol>
+    <li>Tags <code>&lt;h1&gt; - &lt;h6&gt;</code> will count as individual tags.</li>
+    <li>Each entry must pass through the appropriate validators (HTML, CSS, Javascript, etc.).</li>
+    <li>Even though the <code>&lt;script&gt;</code> tag isn't counted in the Tag Counter in the resources section, it will also contribute to the tag count.</li>
+    <li>The <code>&lt;style&gt;</code> tag will also be a freebie regardless of whether you use external CSS sheets or not.</li>
+    <li>Have fun! :^)</li>
+  </ol>
+  <hr>
+  <!-- Credits to Zondicons! -->
+  <span title="Credits to Zondicons! #svg">
+  <img id="airplane-img" src="airplane.svg" alt="small airplane icon" title="Credits to Zondicons!">
+	</span>
+	<h3>Without further ado, here we go!</h3>
+  <!-- Credits to Zondicons! -->
+  <hr>
+  <p><abbr title="HTML Tag Challenge"><strong>HTagML</strong></abbr> has rather humble origins, as it was thought up as I was putting off homework and decided that maybe there was more fun to be had experimenting with Front End Web Development than droning away at my homework <em>(not that I'm condoning procrastination or anything).</em>  I discovered that there were <strong>over 100 tags</strong> (many of them being very specific) and thought it would be interesting to see how others would try and meet the requirement of trying to cram approximately half of them into a single document! I immediately strayed away from the idea of using every single tag as I quickly realized at the pace I was going it would take roughly &infin;<sup>&infin;</sup> years to complete...a bit longer than my goldfish-like attention span has to spare.</p>
+    <hr>
+    <span class="spacer" id="resources"></span>
+    <header><h2>Resources</h2></header>
+    <hr>
+  <p>There were many resources that I utilized in the creation of this monstrosity, many that I will also recommend to you!</p>
+    <ul>
+      <!-- <wbr> inside of the link descriptions to break if the page gets too small -->
+      <li><a href="https://www.w3schools.com/tags/" target="_blank" title="List of all HTML tags from an amazing Web-Dev resource">https://www.<wbr>w3schools.com/tags/</a></li>
+      <li><a href="https://www.zondicons.com/" target="_blank" title="A set of free premium SVG icons for you to use on your digital products.">https://www.<wbr>zondicons.com/</a></li>
+      <li><a href="http://www.heropatterns.com/" target="_blank" title="A collection of repeatable SVG background patterns for you to use on your web projects.">http://www.<wbr>heropatterns.com/</a></li>
+      <li><a href="https://www.colorzilla.com/gradient-editor/" target="_blank" title="Ultimate CSS Gradient Generator, powerful Photoshop-like CSS gradient editor from ColorZilla.">https://www.<wbr>colorzilla.com/gradient-editor/</a></li>
+      <li><a href="http://redwriteblue.com/tags/htmlcount.html" target="_blank" title="HTML Tag Counter">http://redwriteblue<wbr>.com/tags/htmlcount.html</a></li>
+    </ul>
+  <p>If you have anything that you'd recommend I add or any criticism whatsoever, please reach out to me, I appreciate it! The goal of this is simply to connect with the Web Development community while simultaneously becoming a better developer myself! For example through using poorly placed Javascript timers!</p>
+  <time>
+            <p><span>You've been browsing for </span><span id="clockJS1">0 Hrs. 0 Mins. 0 Secs.</span></p>
+  </time>
+</section>
+</main>
+<footer id="footer-box" class="box">
+<span class="spacer" id="contact"></span>
+  &copy; I Don't Have a Company Name Yet, Inc. All Rights Reserved.<br>
+    Created by Anthony Heggin
+    <address>
+  <div class="a2a_kit a2a_kit_size_32 a2a_default_style a2a_follow" id="social-media-buttons">
+    <a class="a2a_button_twitter" title="Twitter" data-a2a-follow="AHeggin"></a>
+    <a class="a2a_button_linkedin" title="Linkedin" data-a2a-follow="anthony-heggin"></a>
+    <a class="a2a_button_facebook" title="Facebook" data-a2a-follow="anthony.heggin"></a>
+  </div>
+  </address>
+</footer>
+<br>
+<!-- script below enables the social media buttons to function -->
+<script async src="https://static.addtoany.com/menu/page.js"></script>
+<!-- script below enables the timer on the bottom to work-->
+<script language="JavaScript" type="text/javascript">
+            ;(function(timerId) {
+                var clockJS = document.getElementById('clockJS' + timerId);
+                if (!clockJS) {
+                    console.log(timerId + ' Not found');
+                    return;
+                }
+
+                var secondsLeft   = 0,
+                    countActive   = true,
+                    countStepper  = 1,
+                    transText     = {"day":["%s Days","%s Day"],"hour":["%s Hrs.","%s Hr."],"minute":["%s Mins.","%s Min."],"second":["%s Secs.","%s Sec."]},
+                    finishMessage = 'This offer has ended!',
+                    clockDayJS    = document.getElementById('clockDayJS' + timerId);
+
+                var calcAge = function(timeLeft, num1, num2, doublezero) {
+                    if (doublezero !== false) {
+                        doublezero = true;
+                    }
+
+                    s = ((Math.floor(timeLeft / num1)) % num2).toString();
+                    if (s.length < 2 && doublezero) {
+                        s = "0" + s;
+                    }
+
+                    return s;
+                };
+
+                var pluralize = function(strings, count, showZero) {
+                    if (count > 0 || showZero) {
+                        var string = +count === 1 ? strings[1] : strings[0];
+                        return string.indexOf('%s') < 0 ?
+                            count + ' ' + string :
+                            string.replace('%s', count);
+                    }
+
+                    return '';
+                };
+
+                var formatTime = function(timeLeft) {
+                    var displayArray = [
+                        pluralize(transText.hour, calcAge(timeLeft, 3600, 24, false)),
+                        pluralize(transText.minute, calcAge(timeLeft, 60, 60)),
+                        pluralize(transText.second, calcAge(timeLeft, 1, 60), true)
+                    ];
+
+                    return displayArray.join(' ');
+                };
+
+                var countBack = function(timeLeft) {
+                    if (timeLeft < 0) {
+                        clockJS.innerHTML = finishMessage;
+
+                        return;
+                    }
+
+                    clockJS.innerHTML = formatTime(timeLeft);
+
+                    if (clockDayJS && timeLeft > 0) {
+                        clockDayJS.innerHTML = pluralize(transText.day, calcAge(timeLeft, 86400, timeLeft, false));
+                    }
+                };
+
+                countStepper = Math.ceil(countStepper);
+
+                if (countStepper === 0) {
+                    countActive = false;
+                }
+
+                var SetTimeOutPeriod = (Math.abs(countStepper) - 1) * 1000 + 990;
+
+                if (countActive) {
+                    var repeatFunc = function() {
+                        secondsLeft += countStepper;
+                        countBack(secondsLeft);
+                        setTimeout(repeatFunc, SetTimeOutPeriod);
+                    };
+                    repeatFunc();
+                } else {
+                    countBack(timeLeft);
+                }
+            })(1);
+        </script>
+</body>
+</html>
